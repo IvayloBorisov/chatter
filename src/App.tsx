@@ -1,7 +1,15 @@
+import { useState } from "react";
+import Login from "./components/Login";
 
 const App = () => {
+
+  const [id, setID] = useState('');
+
   return (
-    <div>Hello</div>
+    <>
+      {console.log(id)}
+      <Login onSubmitID={ setID } />
+    </>
   );
 }
 
