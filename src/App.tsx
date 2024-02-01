@@ -1,4 +1,4 @@
-import Login from "./components/Login";
+import { Dashboard, Login } from './components';
 import { useLocalStorage } from "./hooks/useLocalStorage";
 
 const App = () => {
@@ -7,8 +7,7 @@ const App = () => {
 
   return (
     <>
-      {console.log(id)}
-      <Login onSubmitID={ setID } />
+      { id ? <Dashboard id={ id } /> : <Login onSubmitID={ setID } /> }
     </>
   );
 }
