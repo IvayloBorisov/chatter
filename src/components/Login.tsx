@@ -6,7 +6,7 @@ interface LoginProps {
     onSubmitID: (id: string) => void;
 }
 
-const Login: React.FC<LoginProps> = ({ onSubmitID }): JSX.Element => {
+export const Login: React.FC<LoginProps> = ({ onSubmitID }): JSX.Element => {
 
     const idRef = useRef<HTMLInputElement | null>(null);
 
@@ -32,5 +32,3 @@ const Login: React.FC<LoginProps> = ({ onSubmitID }): JSX.Element => {
         </Container>
     )
 }
-
-export default Login;
